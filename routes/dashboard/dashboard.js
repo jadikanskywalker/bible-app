@@ -1,14 +1,13 @@
 var express = require('express'),
-    app = express(),
     router = express.Router();
 
 router.get('/', (req, res) => {
-  res.render('index.ejs', {
+  res.render('dashboard/index', {
     page: 'home'
   });
 });
 router.get('/:page', (req, res) => {
-  res.render('index.ejs', {
+  res.render('dashboard/index', {
     page: req.params.page
   });
 });
