@@ -70,8 +70,7 @@
             <div class="col-8 col-sm-9 col-md-8">
               <div class="numbers">
                 <p class="card-category">Streak</p>
-                <p class="card-title">5 days
-                  <p>
+                <p class="card-title"><%= user.streak.days %> <% if (user.streak.days === 1) { %>day<% } else { %>days<% } %></p>
               </div>
             </div>
           </div>
@@ -79,7 +78,7 @@
         <div class="card-footer ">
           <hr>
           <div class="stats">
-            <i class="fa fa-refresh"></i> Updated Now
+            <i class="fa fa-refresh"></i> Updated today
           </div>
         </div>
       </div>

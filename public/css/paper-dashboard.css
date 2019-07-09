@@ -3213,13 +3213,15 @@ License - nucleoapp.com/license/
       text-align: center;
       margin-left: 10px;
       margin-right: 12px; }
-    .sidebar .logo a.logo-normal,
-    .off-canvas-sidebar .logo a.logo-normal {
+    .sidebar .logo .logo-normal,
+    .off-canvas-sidebar .logo .logo-normal {
+      font-size: 1.2rem;
       display: block;
       opacity: 1;
-      padding: 11px 0 8px;
+      padding: 11px 0 8px 12px;
       -webkit-transform: translate3d(0px, 0, 0);
-      transform: translate3d(0px, 0, 0); }
+      transform: translate3d(0px, 0, 0);
+      color: white; }
     .sidebar .logo:after,
     .off-canvas-sidebar .logo:after {
       content: '';

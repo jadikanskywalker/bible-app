@@ -174,11 +174,13 @@
       margin-right: 12px;
     }
 
-    a.logo-normal {
+    .logo-normal {
+      font-size: 1.2rem;
       display: block;
       opacity: 1;
-      padding: 11px 0 8px;
+      padding: 11px 0 8px 12px;
       @include transform-translate-x(0px);
+      color: white;
     }
 
     &:after {

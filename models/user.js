@@ -11,7 +11,11 @@ var UserSchema = new mongoose.Schema({
     }
   },
   name: String,
-  email: String
+  email: String,
+  streak: {
+    days: {type: Number, default: 1},
+    date: {type: Date, default: new Date() }
+  }
 });
 
 UserSchema.plugin(passportLocalMongoose);

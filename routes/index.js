@@ -4,7 +4,7 @@ var express = require('express'),
     User = require('../models/user');
 
 router.get('/', (req, res) => {
-  res.redirect('index');
+  res.render('index');
 });
 
 router.get('/signup', (req, res) => {

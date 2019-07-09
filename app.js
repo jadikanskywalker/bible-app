@@ -12,8 +12,8 @@ var express = require('express'),
     session = require("express-session"),
     gulpfile = require('./gulpfile').execFile;
 
-var indexRoutes = require('./routes/'),
-    dashboardRoutes = require('./routes/dashboard/dashboard'),
+var indexRoutes = require('./routes'),
+    dashboardRoutes = require('./routes/dashboard'),
     dashboardContentRoutes = require('./routes/dashboard/content');
 
 mongoose.connect('mongodb://localhost:27017/bible-app', {
@@ -32,8 +32,11 @@ app.use(express.static(__dirname + '/public'));
 app.use(session({
 	secret: 'this is an awesome bible app',
 	resave: false,
-	saveUninitialized: false
+	saveUninitialized: false,
+  cookie: { httpOnly: false }
 }));
+
+app.locals.moment = require('moment');
 
 app.use(passport.initialize());
 app.use(passport.session());

@@ -1,19 +1,20 @@
 var express = require('express'),
-    router = express.Router();
+    router = express.Router(),
+    isLoggedIn = require('../../middleware').isLoggedIn;
 
-router.get('/home', (req, res) => {
+router.get('/home', isLoggedIn, (req, res) => {
   res.render('dashboard/content/home.ejs');
 });
-router.get('/saved', (req, res) => {
+router.get('/saved', isLoggedIn, (req, res) => {
   res.render('dashboard/content/saved.ejs');
 });
-router.get('/notes', (req, res) => {
+router.get('/notes', isLoggedIn, (req, res) => {
   res.render('dashboard/content/notes.ejs');
 });
-router.get('/journal', (req, res) => {
+router.get('/journal', isLoggedIn, (req, res) => {
   res.render('dashboard/content/journal.ejs');
 });
-router.get('/bible', (req, res) => {
+router.get('/bible', isLoggedIn, (req, res) => {
   res.render('dashboard/content/bible.ejs');
 });
 router.get('/icons', (req, res) => {
