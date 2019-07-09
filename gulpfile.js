@@ -8,9 +8,9 @@ var open = require('gulp-open');
 var Paths = {
   HERE: './',
   DIST: 'dist/',
-  CSS: './assets/css/',
-  SCSS_TOOLKIT_SOURCES: './assets/scss/paper-dashboard.scss',
-  SCSS: './assets/scss/**/**'
+  CSS: './public/css/',
+  SCSS_TOOLKIT_SOURCES: './public/scss/paper-dashboard.scss',
+  SCSS: './public/scss/**/**'
 };
 
 gulp.task('compile-scss', function() {

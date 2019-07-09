@@ -1,0 +1,25 @@
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(359deg);
+    -ms-transform: translate(-50%, -50%) rotate(359deg);
+    transform: translate(-50%, -50%) rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    -ms-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    -webkit-transform: translate(-50%, -50%) rotate(359deg);
+    -ms-transform: translate(-50%, -50%) rotate(359deg);
+    transform: translate(-50%, -50%) rotate(359deg);
+  }
+}

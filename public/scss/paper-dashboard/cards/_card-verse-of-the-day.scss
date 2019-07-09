@@ -1,0 +1,33 @@
+.card-verse-of-the-day {
+  .card-header {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    > input {
+      font-size: $font-size-h3;
+      border: none;
+      border-bottom: 2px solid gray;
+      line-height: 1;
+      padding: 4px 6px;
+      margin: 0 5px;
+      width: 200px;
+    }
+    > input {
+      outline: 0;
+      box-shadow: none;
+      
+    }
+  }
+  .card-text {
+    margin: 0px 8px 10px !important;
+    text-indent: 20px;
+    font-size: 16px;
+  }
+  .card-label {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 14px;
+  }
+}

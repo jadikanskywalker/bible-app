@@ -17,10 +17,7 @@
             </nav>
             <div class="credits ml-auto">
               <span class="copyright">
-                ©
-                <script>
-                  document.write(new Date().getFullYear())
-                </script>, made with <i class="fa fa-heart heart"></i> by Creative Tim
+                © <span class="copyright-year"></span>, made with <i class="fa fa-heart heart"></i> by Creative Tim
               </span>
             </div>
           </div>
@@ -49,7 +46,7 @@
       SinglePageRouter.init('<%= page %>');
       SinglePageRouter.loadContent();
       $('.content').show();
-      SinglePageRouter.setCallbacks();
+      $('.copyright-year').html(new Date().getFullYear());
     });
   </script>
 </body>

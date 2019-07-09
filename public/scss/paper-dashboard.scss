@@ -21,6 +21,7 @@
 // Plugins CSS
 @import "paper-dashboard/plugins/plugin-animate-bootstrap-notify";
 @import "paper-dashboard/plugins/plugin-perfect-scrollbar";
+@import "paper-dashboard/plugins/plugin-animate-spin";
 
 // Core CSS
 @import "paper-dashboard/buttons";
@@ -50,5 +51,6 @@
 @import "paper-dashboard/cards/card-map";
 @import "paper-dashboard/cards/card-stats";
 @import "paper-dashboard/cards/card-verse";
+@import "paper-dashboard/cards/card-verse-of-the-day";
 
 @import "paper-dashboard/responsive";
