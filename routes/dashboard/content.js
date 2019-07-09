@@ -1,8 +1,11 @@
 var express = require('express'),
     router = express.Router(),
-    isLoggedIn = require('../../middleware').isLoggedIn;
+    middleware = require('../../middleware'),
+    isLoggedIn = middleware.isLoggedIn,
+    { home } = middleware.content;
 
-router.get('/home', isLoggedIn, (req, res) => {
+
+router.get('/home', isLoggedIn, home, (req, res) => {
   res.render('dashboard/content/home.ejs');
 });
 router.get('/saved', isLoggedIn, (req, res) => {

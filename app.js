@@ -9,7 +9,6 @@ var express = require('express'),
     User = require("./models/user"),
 	  methodOverride = require('method-override'),
     //cookieParser = require("cookie-parser"),
-    session = require("express-session"),
     gulpfile = require('./gulpfile').execFile;
 
 var indexRoutes = require('./routes'),
@@ -45,7 +44,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use(function(req, res, next) {
-	res.locals.user = req.user;
+  res.locals.user = req.user;
 	//res.locals.error = req.flash("error");
 	//res.locals.success = req.flash("success");
 	next();

@@ -3,8 +3,7 @@
       <div class="card card-link">
         <div class="card-body">
           <h2 class="card-title">Saved <i class="nc-icon nc-bookmark-2"></i></h2>
-          <p class="card-text">Inspirational</p>
-          <p class="card-text">Convicting</p>
+          <% if (user.topThree.saved) { user.topThree.saved.forEach(function (folder) { %><p class="card-text"><%= folder %></p><% }) } %>
         </div>
         <div class="card-footer ">
           <hr>
@@ -19,8 +18,7 @@
       <div class="card card-link">
         <div class="card-body">
           <h2 class="card-title">Notes <i class="nc-icon nc-single-copy-04"></i></h2>
-          <p class="card-text">Inspirational</p>
-          <p class="card-text">Convicting</p>
+          <% if (user.topThree.notes) { user.topThree.notes.forEach(function (note) { %><p class="card-text"><%= note %></p><% }) } %>
         </div>
         <div class="card-footer ">
           <hr>
@@ -35,8 +33,7 @@
       <div class="card card-link">
         <div class="card-body">
           <h2 class="card-title">Journal <i class="nc-icon nc-book-bookmark"></i></h2>
-          <p class="card-text">Inspirational</p>
-          <p class="card-text">Convicting</p>
+          <% if (user.topThree.journal) { user.topThree.journal.forEach(function (journal) { %><p class="card-text"><%= journal %></p><% }) } %>
         </div>
         <div class="card-footer ">
           <hr>

@@ -2,6 +2,8 @@ var mongoose = require("mongoose");
 var passportLocalMongoose = require("passport-local-mongoose");
 
 var UserSchema = new mongoose.Schema({
+  name: String,
+  email: String,
   isAdmin: {type: Boolean, default: false},
   settings: {
     version: String,
@@ -10,8 +12,11 @@ var UserSchema = new mongoose.Schema({
       size: Number
     }
   },
-  name: String,
-  email: String,
+  topThree: {
+    saved: [ String ],
+    notes: [ String ],
+    journal: [ String ]
+  },
   streak: {
     days: {type: Number, default: 1},
     date: {type: Date, default: new Date() }
