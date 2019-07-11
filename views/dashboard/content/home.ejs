@@ -3,7 +3,15 @@
       <div class="card card-link">
         <div class="card-body">
           <h2 class="card-title">Saved <i class="nc-icon nc-bookmark-2"></i></h2>
-          <% if (user.topThree.saved) { user.topThree.saved.forEach(function (folder) { %><p class="card-text"><%= folder %></p><% }) } %>
+       <% if (user.topTwo.saved.length >= 2) {
+            for (var i = 0; i < 2; i++) { %>
+              <p class="card-text"><%= user.topTwo.saved[i] %></p>
+         <% }
+          } else if (user.topTwo.saved.length == 1) { %>
+            <p class="card-text card-text-only"><%= user.topTwo.saved[0] %></p>
+       <% } else { %>
+            <p class="card-text card-text-only text-muted">No saved folders yet</p>
+       <% } %>
         </div>
         <div class="card-footer ">
           <hr>
@@ -18,7 +26,15 @@
       <div class="card card-link">
         <div class="card-body">
           <h2 class="card-title">Notes <i class="nc-icon nc-single-copy-04"></i></h2>
-          <% if (user.topThree.notes) { user.topThree.notes.forEach(function (note) { %><p class="card-text"><%= note %></p><% }) } %>
+       <% if (user.topTwo.notes.length >= 2) {
+            for (var i = 0; i < 2; i++) { %>
+              <p class="card-text"><%= user.topTwo.notes[i] %></p>
+         <% }
+          } else if (user.topTwo.notes.length == 1) { %>
+            <p class="card-text card-text-only"><%= user.topTwo.notes[0] %></p>
+       <% } else { %>
+            <p class="card-text card-text-only text-muted">No notes yet</p>
+       <% } %>
         </div>
         <div class="card-footer ">
           <hr>
@@ -33,7 +49,15 @@
       <div class="card card-link">
         <div class="card-body">
           <h2 class="card-title">Journal <i class="nc-icon nc-book-bookmark"></i></h2>
-          <% if (user.topThree.journal) { user.topThree.journal.forEach(function (journal) { %><p class="card-text"><%= journal %></p><% }) } %>
+       <% if (user.topTwo.journal.length >= 2) {
+            for (var i = 0; i < 2; i++) { %>
+              <p class="card-text"><%= user.topTwo.journal[i] %></p>
+         <% }
+          } else if (user.topTwo.journal.length == 1) { %>
+            <p class="card-text card-text-only"><%= user.topTwo.journal[0] %></p>
+       <% } else { %>
+            <p class="card-text card-text-only text-muted">No journal entries yet</p>
+       <% } %>
         </div>
         <div class="card-footer ">
           <hr>

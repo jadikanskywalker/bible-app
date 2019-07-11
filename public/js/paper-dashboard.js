@@ -59,7 +59,7 @@ $(document).ready(function() {
   // Check if we have the class "navbar-color-on-scroll" then add the function to remove the class "navbar-transparent" so it will transform to a plain color.
   if ($('.navbar[color-on-scroll]').length != 0) {
     paperDashboard.checkScrollForTransparentNavbar();
-    $(window).on('scroll', paperDashboard.checkScrollForTransparentNavbar)
+    $(window).on('scroll', paperDashboard.checkScrollForTransparentNavbar);
   }
 
   $('.form-control').on("focus", function() {

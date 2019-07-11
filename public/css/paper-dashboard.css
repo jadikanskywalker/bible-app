@@ -620,13 +620,13 @@ Copyright (c) 2015 Daniel Eden
       box-shadow: none; }
 
 .btn-danger {
-  background-color: #ef8157;
+  background-color: #ff6969;
   color: #FFFFFF; }
   .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger:active:focus, .btn-danger:active:hover, .btn-danger.active:focus, .btn-danger.active:hover,
   .show > .btn-danger.dropdown-toggle,
   .show > .btn-danger.dropdown-toggle:focus,
   .show > .btn-danger.dropdown-toggle:hover {
-    background-color: #eb6532 !important;
+    background-color: #ff4040 !important;
     color: #FFFFFF !important;
     box-shadow: none !important; }
   .btn-danger:not([data-action]):hover {
@@ -638,21 +638,21 @@ Copyright (c) 2015 Daniel Eden
   fieldset[disabled] .btn-danger.focus,
   fieldset[disabled] .btn-danger:active,
   fieldset[disabled] .btn-danger.active {
-    background-color: #ef8157;
-    border-color: #ef8157; }
+    background-color: #ff6969;
+    border-color: #ff6969; }
   .btn-danger.btn-simple {
-    color: #ef8157;
-    border-color: #ef8157; }
+    color: #ff6969;
+    border-color: #ff6969; }
     .btn-danger.btn-simple:hover, .btn-danger.btn-simple:focus, .btn-danger.btn-simple:active {
       background-color: transparent;
-      color: #eb6532;
-      border-color: #eb6532;
+      color: #ff4040;
+      border-color: #ff4040;
       box-shadow: none; }
   .btn-danger.btn-link {
-    color: #ef8157; }
+    color: #ff6969; }
     .btn-danger.btn-link:hover, .btn-danger.btn-link:focus, .btn-danger.btn-link:active, .btn-danger.btn-link:active:focus {
       background-color: transparent;
-      color: #eb6532;
+      color: #ff4040;
       text-decoration: none;
       box-shadow: none; }
 
@@ -788,15 +788,15 @@ Copyright (c) 2015 Daniel Eden
 
 .btn-outline-danger {
   background: transparent;
-  border: 2px solid #ef8157 !important;
-  color: #ef8157;
+  border: 2px solid #ff6969 !important;
+  color: #ff6969;
   opacity: 1;
   filter: alpha(opacity=100); }
   .btn-outline-danger:hover, .btn-outline-danger:focus, .btn-outline-danger:active, .btn-outline-danger:focus:active, .btn-outline-danger.active,
   .open > .btn-outline-danger.dropdown-toggle {
-    background-color: #ef8157 !important;
+    background-color: #ff6969 !important;
     color: rgba(255, 255, 255, 0.8) !important;
-    border-color: #ef8157 !important; }
+    border-color: #ff6969 !important; }
     .btn-outline-danger:hover .caret, .btn-outline-danger:focus .caret, .btn-outline-danger:active .caret, .btn-outline-danger:focus:active .caret, .btn-outline-danger.active .caret,
     .open > .btn-outline-danger.dropdown-toggle .caret {
       border-top-color: rgba(255, 255, 255, 0.8) !important; }
@@ -810,7 +810,7 @@ Copyright (c) 2015 Daniel Eden
   fieldset[disabled] .btn-outline-danger:active,
   fieldset[disabled] .btn-outline-danger.active {
     background-color: transparent !important;
-    border-color: #ef8157 !important; }
+    border-color: #ff6969 !important; }
 
 .btn-outline-neutral {
   background: transparent;
@@ -864,9 +864,9 @@ Copyright (c) 2015 Daniel Eden
     background-color: #FFFFFF;
     border-color: #FFFFFF; }
   .btn-neutral.btn-danger {
-    color: #ef8157; }
+    color: #ff6969; }
     .btn-neutral.btn-danger:hover, .btn-neutral.btn-danger:focus, .btn-neutral.btn-danger:active, .btn-neutral.btn-danger:active:focus {
-      color: #eb6532 !important; }
+      color: #ff4040 !important; }
   .btn-neutral.btn-info {
     color: #51bcda !important; }
     .btn-neutral.btn-info:hover, .btn-neutral.btn-info:focus, .btn-neutral.btn-info:active, .btn-neutral.btn-info:active:focus {
@@ -972,7 +972,7 @@ fieldset[disabled]
 
 .btn-link {
   border: 0;
-  padding: 0.5rem 0.7rem;
+  padding: 8px 0.7rem;
   background-color: transparent; }
 
 .btn-lg {
@@ -1067,13 +1067,13 @@ fieldset[disabled]
     color: #6bd098; }
   .has-danger .form-control {
     background-color: #FFC0A4;
-    border: 1px solid #ef8157;
-    color: #ef8157; }
+    border: 1px solid #ff6969;
+    color: #ff6969; }
     .has-danger .form-control.form-control-danger {
       padding-right: 2.5em !important; }
   .has-danger .form-control:focus {
     background-color: #FFFFFF;
-    border: 1px solid #ef8157; }
+    border: 1px solid #ff6969; }
   .form-control + .form-control-feedback {
     border-radius: 6px;
     font-size: 14px;
@@ -1209,7 +1209,7 @@ fieldset[disabled]
   border: none; }
 
 .has-error .form-control-feedback, .has-error .control-label {
-  color: #ef8157; }
+  color: #ff6969; }
 
 .has-success .form-control-feedback, .has-success .control-label {
   color: #6bd098; }
@@ -1217,13 +1217,13 @@ fieldset[disabled]
 .input-group.has-danger .input-group-prepend {
   border-radius: 4px; }
   .input-group.has-danger .input-group-prepend .input-group-text {
-    border: 1px solid #ef8157;
+    border: 1px solid #ff6969;
     border-right: none; }
 
 .input-group.has-danger .error {
   display: block;
   width: 100%;
-  color: #ef8157;
+  color: #ff6969;
   margin-top: 3px; }
 
 .input-group.has-success .input-group-prepend {
@@ -1271,14 +1271,14 @@ fieldset[disabled]
   .has-danger.input-group-focus .input-group-append .input-group-text, .has-danger.input-group-focus
   .input-group-prepend .input-group-text {
     background-color: #FFFFFF;
-    color: #ef8157; }
+    color: #ff6969; }
   .has-success.input-group-focus .input-group-append .input-group-text, .has-success.input-group-focus
   .input-group-prepend .input-group-text {
     background-color: #FFFFFF;
     color: #6bd098; }
   .has-danger .form-control:focus + .input-group-append .input-group-text, .has-danger .form-control:focus +
   .input-group-prepend .input-group-text {
-    color: #ef8157; }
+    color: #ff6969; }
   .has-success .form-control:focus + .input-group-append .input-group-text, .has-success .form-control:focus +
   .input-group-prepend .input-group-text {
     color: #6bd098; }
@@ -1286,7 +1286,7 @@ fieldset[disabled]
   .input-group-append .input-group-text ~ .form-control,
   .input-group-prepend .input-group-text + .form-control,
   .input-group-prepend .input-group-text ~ .form-control {
-    padding: -0.5rem 0.7rem;
+    padding: 7px 0.7rem;
     padding-left: 18px; }
   .input-group-append .input-group-text i,
   .input-group-prepend .input-group-text i {
@@ -1311,7 +1311,7 @@ fieldset[disabled]
     margin-top: 9px; }
   .input-group.has-danger .error,
   .form-group.has-danger .error {
-    color: #ef8157; }
+    color: #ff6969; }
 
 .input-group[disabled] .input-group-prepend .input-group-text,
 .input-group[disabled] .input-group-append .input-group-text {
@@ -1512,7 +1512,7 @@ a.text-warning:focus, a.text-warning:hover {
 
 .text-danger,
 a.text-danger:focus, a.text-danger:hover {
-  color: #ef8157 !important; }
+  color: #ff6969 !important; }
 
 .text-gray,
 a.text-gray:focus, a.text-gray:hover {
@@ -1534,10 +1534,10 @@ a.text-gray:focus, a.text-gray:hover {
     .blockquote.blockquote-primary small {
       color: #51cbce; }
   .blockquote.blockquote-danger {
-    border-color: #ef8157;
-    color: #ef8157; }
+    border-color: #ff6969;
+    color: #ff6969; }
     .blockquote.blockquote-danger small {
-      color: #ef8157; }
+      color: #ff6969; }
   .blockquote.blockquote-white {
     border-color: rgba(255, 255, 255, 0.8);
     color: #FFFFFF; }
@@ -1673,8 +1673,8 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   background-color: #fbc658; }
 
 .badge.badge-danger {
-  border-color: #ef8157;
-  background-color: #ef8157; }
+  border-color: #ff6969;
+  background-color: #ff6969; }
 
 .badge.badge-neutral {
   border-color: #FFFFFF;
@@ -1797,6 +1797,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
   min-height: 53px;
+  height: 63px;
   margin-bottom: 20px; }
   .navbar a {
     vertical-align: middle; }
@@ -1819,7 +1820,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   .navbar.bg-white .input-group-prepend .input-group-text i,
   .navbar.bg-white .input-group-append .input-group-text i {
     color: #66615B;
-    opacity: .5; }
+    opacity: 0.5; }
   .navbar .form-group,
   .navbar .input-group {
     margin: 0;
@@ -1894,8 +1895,8 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   .navbar .navbar-nav .nav-link {
     text-transform: uppercase;
     font-size: 0.7142em;
-    padding: 0.5rem 0.7rem;
-    line-height: 1.625rem;
+    padding: 8px 0.7rem;
+    line-height: 26px;
     margin-right: 3px; }
     .navbar .navbar-nav .nav-link i.fa + p,
     .navbar .navbar-nav .nav-link i.nc-icon + p {
@@ -1914,7 +1915,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
       width: 27px;
       height: 27px; }
     .navbar .navbar-nav .nav-link.disabled {
-      opacity: .5;
+      opacity: 0.5;
       color: #FFFFFF; }
   .navbar .navbar-nav .nav-item.active .nav-link:not(.btn),
   .navbar .navbar-nav .nav-item .nav-link:not(.btn):focus,
@@ -1932,9 +1933,17 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   .navbar .navbar-brand {
     text-transform: capitalize;
     font-size: 20px;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    line-height: 1.625rem; }
+    padding-top: 8px;
+    padding-bottom: 8px;
+    line-height: 26px; }
+    .navbar .navbar-brand a {
+      vertical-align: unset; }
+    .navbar .navbar-brand .breadcrumb {
+      cursor: auto;
+      padding: 0.5rem 0.9rem;
+      margin: 0 !important; }
+      .navbar .navbar-brand .breadcrumb span:hover {
+        cursor: pointer; }
   .navbar .navbar-toggler {
     width: 37px;
     height: 27px;
@@ -1955,7 +1964,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
     .navbar.navbar-transparent a:not(.dropdown-item):not(.btn) {
       color: #66615B; }
       .navbar.navbar-transparent a:not(.dropdown-item):not(.btn).disabled {
-        opacity: .5;
+        opacity: 0.5;
         color: #66615B; }
     .navbar.navbar-transparent .button-bar {
       background: #66615B; }
@@ -1970,7 +1979,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   .navbar.bg-white a:not(.dropdown-item):not(.btn) {
     color: #66615B; }
     .navbar.bg-white a:not(.dropdown-item):not(.btn).disabled {
-      opacity: .5;
+      opacity: 0.5;
       color: #66615B; }
   .navbar.bg-white .button-bar {
     background: #66615B; }
@@ -1997,7 +2006,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   background-color: #6bd098 !important; }
 
 .bg-danger {
-  background-color: #ef8157 !important; }
+  background-color: #ff6969 !important; }
 
 .bg-warning {
   background-color: #fbc658 !important; }
@@ -2208,7 +2217,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
     background-color: #fcd27b; }
   .dropdown-menu.dropdown-danger .dropdown-item:hover,
   .dropdown-menu.dropdown-danger .dropdown-item:focus {
-    background-color: #f29978; }
+    background-color: #ff8d8d; }
 
 .dropdown-divider {
   margin: 0 !important; }
@@ -2338,9 +2347,9 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
     .dropdown-actions .dropdown-item .action-line .col-sm-9 {
       line-height: 34px; }
   .dropdown-actions .dropdown-item .link-danger {
-    color: #ef8157; }
+    color: #ff6969; }
     .dropdown-actions .dropdown-item .link-danger:hover, .dropdown-actions .dropdown-item .link-danger:active, .dropdown-actions .dropdown-item .link-danger:focus {
-      color: #ef8157; }
+      color: #ff6969; }
 
 .dropdown-actions li:hover a,
 .dropdown-actions li:focus a {
@@ -2443,7 +2452,7 @@ a[data-toggle="collapse"][aria-expanded="true"] .caret,
   .alert.alert-success {
     background-color: #7ed6a5; }
   .alert.alert-danger {
-    background-color: #f1926e; }
+    background-color: #ff8383; }
   .alert.alert-warning {
     background-color: #fccf71; }
   .alert.alert-info {
@@ -3161,6 +3170,15 @@ License - nucleoapp.com/license/
     .off-canvas-sidebar .nav li:focus:not(.active) > a {
       opacity: 1;
       color: #fff; }
+    .sidebar .nav .separated,
+    .off-canvas-sidebar .nav .separated {
+      padding: 2px 10px;
+      margin: 25px 5px 15px;
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray; }
+      .sidebar .nav .separated > a,
+      .off-canvas-sidebar .nav .separated > a {
+        margin: 0; }
     .sidebar .nav i,
     .off-canvas-sidebar .nav i {
       font-size: 24px;
@@ -3203,53 +3221,54 @@ License - nucleoapp.com/license/
   .sidebar .logo,
   .off-canvas-sidebar .logo {
     position: relative;
-    padding: 7px 0.7rem;
-    z-index: 4; }
-    .sidebar .logo a.logo-mini,
-    .off-canvas-sidebar .logo a.logo-mini {
-      opacity: 1;
-      float: left;
-      width: 34px;
-      text-align: center;
-      margin-left: 10px;
-      margin-right: 12px; }
-    .sidebar .logo .logo-normal,
-    .off-canvas-sidebar .logo .logo-normal {
-      font-size: 1.2rem;
-      display: block;
-      opacity: 1;
-      padding: 11px 0 8px 12px;
-      -webkit-transform: translate3d(0px, 0, 0);
-      transform: translate3d(0px, 0, 0);
-      color: white; }
-    .sidebar .logo:after,
-    .off-canvas-sidebar .logo:after {
+    height: 63px;
+    padding: 10px 0.7rem;
+    z-index: 4;
+    /*&:after {
       content: '';
       position: absolute;
       bottom: 0;
       right: 15px;
       height: 1px;
       width: calc(100% - 30px);
-      background-color: rgba(255, 255, 255, 0.5); }
+      background-color: $opacity-5;
+    }*/ }
+    .sidebar .logo a.logo-mini,
+    .off-canvas-sidebar .logo a.logo-mini {
+      opacity: 1;
+      float: left;
+      width: 34px;
+      text-align: center;
+      padding: 4px 0;
+      margin-left: 10px;
+      margin-right: 12px; }
+      .sidebar .logo a.logo-mini img,
+      .off-canvas-sidebar .logo a.logo-mini img {
+        border-radius: 50%; }
+    .sidebar .logo a.logo-normal,
+    .off-canvas-sidebar .logo a.logo-normal {
+      display: block;
+      opacity: 1;
+      -webkit-transform: translate3d(0px, 0, 0);
+      transform: translate3d(0px, 0, 0); }
     .sidebar .logo p,
     .off-canvas-sidebar .logo p {
       float: left;
       font-size: 20px;
-      margin: 10px 10px;
+      margin: 0 10px;
       color: #FFFFFF;
-      line-height: 20px;
+      line-height: 24px;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
     .sidebar .logo .simple-text,
     .off-canvas-sidebar .logo .simple-text {
-      text-transform: uppercase;
-      padding: 0.5rem 0;
+      padding: 8px 0;
       display: block;
       white-space: nowrap;
-      font-size: 1rem;
+      font-size: 20px;
       color: #FFFFFF;
       text-decoration: none;
-      font-weight: 400;
-      line-height: 30px;
+      font-weight: 300;
+      line-height: 26px;
       overflow: hidden; }
   .sidebar .logo-tim,
   .off-canvas-sidebar .logo-tim {
@@ -3324,17 +3343,22 @@ License - nucleoapp.com/license/
   .sidebar[data-color='black']:after,
   .off-canvas-sidebar[data-color='black']:after {
     background: #212120; }
-  .sidebar[data-active-color='primary'] .nav li.active > a,
-  .sidebar[data-active-color='primary'] .nav li.active > a i,
-  .sidebar[data-active-color='primary'] .nav li.active > a[data-toggle="collapse"],
-  .sidebar[data-active-color='primary'] .nav li.active > a[data-toggle="collapse"] i,
-  .sidebar[data-active-color='primary'] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active .sidebar-mini-icon,
-  .sidebar[data-active-color='primary'] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active > a,
+  Active color changing .sidebar[data-active-color='primary'] .nav li.active > a,
+  Active color changing .sidebar[data-active-color='primary'] .nav li.active > a i,
+  Active color changing .sidebar[data-active-color='primary'] .nav li.active > a[data-toggle="collapse"],
+  Active color changing .sidebar[data-active-color='primary'] .nav li.active > a[data-toggle="collapse"] i,
+  Active color changing .sidebar[data-active-color='primary'] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active .sidebar-mini-icon,
+  Active color changing .sidebar[data-active-color='primary'] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active > a, Active color changing
   .off-canvas-sidebar[data-active-color='primary'] .nav li.active > a,
+  Active color changing
   .off-canvas-sidebar[data-active-color='primary'] .nav li.active > a i,
+  Active color changing
   .off-canvas-sidebar[data-active-color='primary'] .nav li.active > a[data-toggle="collapse"],
+  Active color changing
   .off-canvas-sidebar[data-active-color='primary'] .nav li.active > a[data-toggle="collapse"] i,
+  Active color changing
   .off-canvas-sidebar[data-active-color='primary'] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active .sidebar-mini-icon,
+  Active color changing
   .off-canvas-sidebar[data-active-color='primary'] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active > a {
     color: #51cbce;
     opacity: 1; }
@@ -3392,7 +3416,7 @@ License - nucleoapp.com/license/
   .off-canvas-sidebar[data-active-color='danger'] .nav li.active > a[data-toggle="collapse"] i,
   .off-canvas-sidebar[data-active-color='danger'] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active .sidebar-mini-icon,
   .off-canvas-sidebar[data-active-color='danger'] .nav li.active > a[data-toggle="collapse"] ~ div > ul > li.active > a {
-    color: #ef8157;
+    color: #ff6969;
     opacity: 1; }
 
 .visible-on-sidebar-regular {
@@ -3464,9 +3488,9 @@ License - nucleoapp.com/license/
   height: 380px; }
 
 .footer {
-  padding: 24px 0;
-  height: 70px;
-  margin-top: -70px; }
+  padding: 20px 0;
+  height: 62px;
+  margin-top: -62px; }
   .footer.footer-default {
     background-color: #f2f2f2; }
   .footer nav {
@@ -3481,7 +3505,7 @@ License - nucleoapp.com/license/
       display: inline-block; }
       .footer ul li a {
         color: inherit;
-        padding: 0.5rem;
+        padding: 8px;
         font-size: 0.8571em;
         text-transform: uppercase;
         text-decoration: none; }
@@ -3572,7 +3596,7 @@ License - nucleoapp.com/license/
   .fixed-plugin .badge-yellow {
     background-color: #fbc658; }
   .fixed-plugin .badge-red {
-    background-color: #ef8157; }
+    background-color: #ff6969; }
   .fixed-plugin h5 {
     font-size: 14px;
     margin: 10px; }
@@ -3753,7 +3777,7 @@ License - nucleoapp.com/license/
     .card[data-background-color='orange'] .card-footer .stats {
       color: #FFFFFF; }
   .card[data-background-color='red'] {
-    background-color: #ef8157; }
+    background-color: #ff6969; }
   .card[data-background-color='yellow'] {
     background-color: #fbc658; }
   .card[data-background-color='blue'] {
@@ -3821,8 +3845,12 @@ License - nucleoapp.com/license/
       margin-left: 10px;
       font-size: 90%; }
   .card-link .card-body .card-text {
-    margin-left: 12px;
+    margin: 0 0 14px 12px;
     font-size: 16px; }
+  .card-link .card-body .card-text:last-child {
+    margin: 0 0 0 12px; }
+  .card-link .card-body .card-text-only {
+    margin: 0 0 30px 12px !important; }
   .card-link .card-body .ti-shine {
     margin-left: 5px;
     margin-right: 10px; }

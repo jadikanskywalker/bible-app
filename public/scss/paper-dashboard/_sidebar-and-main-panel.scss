@@ -2,13 +2,11 @@
   position: relative;
   top: 0;
   height: 100vh;
-
   &.wrapper-full-page {
     min-height: 100vh;
     height: auto;
   }
 }
-
 .sidebar,
 .off-canvas-sidebar {
   position: fixed;
@@ -19,7 +17,6 @@
   left: 0;
   z-index: 1030;
   border-right: 1px solid #ddd;
-
   .moving-arrow {
     border-right: 17px solid #f4f3ef;
     border-top: 17px solid transparent;
@@ -30,7 +27,6 @@
     top: 28px;
     transition: all 0.5s cubic-bezier(0.29, 1.42, 0.79, 1);
   }
-
   .sidebar-wrapper {
     position: relative;
     height: calc(100vh - 75px);
@@ -38,7 +34,6 @@
     width: 260px;
     z-index: 4;
     padding-bottom: 100px;
-
     .dropdown .dropdown-backdrop {
       display: none !important;
     }
@@ -46,13 +41,11 @@
       border: none;
     }
   }
-
   .navbar-minimize {
     position: absolute;
     right: 20px;
     top: 2px;
     opacity: 1;
-
     @extend .animation-transition-general;
   }
   .logo-tim {
@@ -63,13 +56,11 @@
     width: 61px;
     float: left;
     overflow: hidden;
-
     img {
       width: 60px;
       height: 60px;
     }
   }
-
   .nav {
     margin-top: 20px;
     display: block;
@@ -111,6 +102,15 @@
         color: #fff;
       }
     }
+    .separated {
+      padding: 2px 10px;
+      margin: 25px 5px 15px;
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+      > a {
+        margin: 0;
+      }
+    }
     i {
       font-size: 24px;
       float: left;
@@ -131,7 +131,6 @@
       }
     }
   }
-
   .sidebar-background {
     position: absolute;
     z-index: 1;
@@ -142,7 +141,6 @@
     left: 0;
     background-size: cover;
     background-position: center center;
-
     &:after {
       position: absolute;
       z-index: 3;
@@ -154,36 +152,31 @@
       opacity: 1;
     }
   }
-
   .logo {
     position: relative;
-    padding: 7px $padding-base-horizontal;
+    height: 63px;
+    padding: 10px $padding-base-horizontal;
     z-index: 4;
-
     a.logo-mini,
     a.logo-normal {
       @extend .animation-transition-general;
     }
-
     a.logo-mini {
       opacity: 1;
       float: left;
       width: 34px;
       text-align: center;
+      padding: 4px 0;
       margin-left: 10px;
       margin-right: 12px;
+      img { border-radius: 50%; }
     }
-
-    .logo-normal {
-      font-size: 1.2rem;
+    a.logo-normal {
       display: block;
       opacity: 1;
-      padding: 11px 0 8px 12px;
       @include transform-translate-x(0px);
-      color: white;
     }
-
-    &:after {
+    /*&:after {
       content: '';
       position: absolute;
       bottom: 0;
@@ -191,31 +184,27 @@
       height: 1px;
       width: calc(100% - 30px);
       background-color: $opacity-5;
-    }
-
+    }*/
     p {
       float: left;
       font-size: 20px;
-      margin: 10px 10px;
+      margin: 0 10px;
       color: $white-color;
-      line-height: 20px;
+      line-height: 24px;
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
-
     .simple-text {
-      text-transform: uppercase;
       padding: $padding-base-vertical 0;
       display: block;
       white-space: nowrap;
-      font-size: $font-size-large;
+      font-size: 20px;
       color: $white-color;
       text-decoration: none;
-      font-weight: $font-weight-normal;
-      line-height: 30px;
+      font-weight: $font-weight-light;
+      line-height: 26px;
       overflow: hidden;
     }
   }
-
   .logo-tim {
     border-radius: 50%;
     border: 1px solid #333;
@@ -224,13 +213,11 @@
     width: 61px;
     float: left;
     overflow: hidden;
-
     img {
       width: 60px;
       height: 60px;
     }
   }
-
   &:before,
   &:after {
     display: block;
@@ -242,23 +229,18 @@
     top: 0;
     left: 0;
   }
-
   &:after {
     @include icon-gradient($default-color);
     z-index: 3;
   }
-
   &[data-color='white'] {
     @include sidebar-color($white-color);
     @include sidebar-text-color($default-color);
   }
   &[data-color='black'] {
     @include sidebar-color($dark-color);
-  }
-
-  // Active color changing
-
-  &[data-active-color='primary'] {
+  } //
+  Active color changing &[data-active-color='primary'] {
     @include sidebar-active-color($primary-color);
   }
   &[data-active-color='info'] {
@@ -274,39 +256,33 @@
     @include sidebar-active-color($danger-color);
   }
 }
-
 .visible-on-sidebar-regular {
   display: inline-block !important;
 }
 .visible-on-sidebar-mini {
   display: none !important;
 }
-
 .off-canvas-sidebar {
   .nav {
     > li > a,
     > li > a:hover {
       color: $white-color;
     }
-
     > li > a:focus {
       background: rgba(200, 200, 200, 0.2);
     }
   }
 }
-
 .main-panel {
   position: relative;
   float: right;
   width: $sidebar-width;
   background-color: #f4f3ef;
   overflow: auto;
-
   .main-panel-top {
     position: relative;
     min-height: 100vh;
     padding-bottom: 70px;
-
     > .content {
       padding: 20px 35px 20px;
       display: none;
@@ -316,19 +292,15 @@
         padding-right: 12px;
       }
     }
-
     > .navbar {
       margin-bottom: 0;
     }
   }
-
   @include transition (0.50s, cubic-bezier(0.685, 0.0473, 0.346, 1));
-
   .header {
     margin-bottom: 50px;
   }
 }
-
 .perfect-scrollbar-on {
   .sidebar,
   .main-panel {
@@ -336,7 +308,6 @@
     max-height: 100%;
   }
 }
-
 .panel-header {
   height: 260px;
   padding-top: 80px;
@@ -353,7 +324,6 @@
   background: linear-gradient(to right, #0c2646 0%, #204065 60%, #2a5788 100%);
   position: relative;
   overflow: hidden;
-
   .header {
     .title {
       color: $white-color;
@@ -363,18 +333,15 @@
       color: $opacity-5;
       margin: 0 auto;
       font-size: 13px;
-
       a {
         color: $white-color;
       }
     }
   }
 }
-
 .panel-header-sm {
   height: 135px;
 }
-
 .panel-header-lg {
   height: 380px;
 }

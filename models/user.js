@@ -3,7 +3,7 @@ var passportLocalMongoose = require("passport-local-mongoose");
 
 var UserSchema = new mongoose.Schema({
   name: String,
-  email: String,
+  email: {type: String, unique: true },
   isAdmin: {type: Boolean, default: false},
   settings: {
     version: String,
@@ -12,10 +12,10 @@ var UserSchema = new mongoose.Schema({
       size: Number
     }
   },
-  topThree: {
-    saved: [ String ],
-    notes: [ String ],
-    journal: [ String ]
+  topTwo: {
+    saved: { type: Array, default: [] },
+    notes: { type: Array, default: [] },
+    journal: { type: Array, default: [] }
   },
   streak: {
     days: {type: Number, default: 1},
@@ -23,6 +23,6 @@ var UserSchema = new mongoose.Schema({
   }
 });
 
-UserSchema.plugin(passportLocalMongoose);
+UserSchema.plugin(passportLocalMongoose, {usernameQueryFields: ['email']});
 
 module.exports = mongoose.model("User", UserSchema);

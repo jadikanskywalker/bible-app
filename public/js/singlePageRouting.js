@@ -22,6 +22,9 @@ var SinglePageRouter = SinglePageRouter || (function(){
         case "bible":
           this.updateContent("bible", false);
           break;
+        case "profile":
+          this.updateContent("profile", false);
+          break;
         case "icons":
           this.updateContent("icons", false);
           break;
@@ -65,12 +68,17 @@ var SinglePageRouter = SinglePageRouter || (function(){
       let link = $('.sidebar .' + page + '-link');
       $('.sidebar-wrapper a').off('click');
       $('.content').load('/dashboard/content/' + page, function() {
-        parentRouter.setCallbacks();
         $('.sidebar-wrapper .active').removeClass('active');
         link.parent().addClass('active');
         let height = link.position().top - 20;
         $('.moving-arrow').css('transform', 'translate3d(0px, ' + height + 'px, 0px)');
         history.pushState(null, null, '/dashboard/' + page);
+        if (page == 'saved' || page == 'notes' || page == 'journal') {
+          $('.navbar-brand').html('<nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><span class="home-link">Home</span></li><li class="breadcrumb-item active" aria-current="page">' + page + '</li></ol></nav>');
+        } else {
+          $('.navbar-brand').html(page);
+        }
+        parentRouter.setCallbacks();
       });
       /* home: function() {
         let link = $('#home-link');
@@ -173,6 +181,9 @@ var SinglePageRouter = SinglePageRouter || (function(){
       });
       $('.bible-link').click(function() {
         parentRouter.updateContent("bible", true);
+      });
+      $('.profile-link').click(function() {
+        parentRouter.updateContent("profile", true);
       });
       $('.icons-link').click(function() {
         parentRouter.updateContent("icons", true);

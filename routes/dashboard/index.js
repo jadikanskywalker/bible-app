@@ -1,7 +1,6 @@
 var express = require('express'),
   router = express.Router(),
-  { isLoggedIn, updateStreak } = require('../../middleware'),
-  User = require('../../models/user');
+  { isLoggedIn, updateStreak } = require('../../middleware');
 
 router.get('/', isLoggedIn, updateStreak, (req, res) => {
   res.render('dashboard/index', {
