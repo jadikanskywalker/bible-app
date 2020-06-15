@@ -1,8 +1,8 @@
-var express = require('express'),
+const express = require('express'),
     router = express.Router(),
-    middleware = require('../../middleware'),
+    User = require('../../../models/user'),
+    middleware = require('../../../middleware'),
     { isLoggedIn } = middleware;
-
 
 router.get('/home', isLoggedIn, (req, res) => {
   res.render('dashboard/content/home.ejs');
@@ -18,6 +18,13 @@ router.get('/journal', isLoggedIn, (req, res) => {
 });
 router.get('/bible', isLoggedIn, (req, res) => {
   res.render('dashboard/content/bible.ejs');
+});
+router.get('/profile', isLoggedIn, (req, res) => {
+  User.findById(req.user.id, function(err, user) {
+    if (err) console.log(err);
+    else res.locals.user = user;
+    res.render('dashboard/content/profile.ejs');
+  });
 });
 router.get('/icons', (req, res) => {
   res.render('dashboard/content/icons.ejs');

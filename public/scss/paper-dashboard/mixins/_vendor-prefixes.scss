@@ -11,6 +11,13 @@
     transition: all $time $type;
 }
 
+@mixin doubleTransition($style, $time, $type, $style2, $time2, $type2){
+    -webkit-transition: $style $time $type, $style2 $time2 $type2;
+    -moz-transition: $style $time $type, $style2 $time2 $type2;
+    -o-transition: $style $time $type, $style2 $time2 $type2;
+    -ms-transition: $style $time $type, $style2 $time2 $type2;
+    transition: $style $time $type, $style2 $time2 $type2;
+}
 
 @mixin sidebar-color($color){
   &:after{

@@ -1,4 +1,4 @@
-var express = require('express'),
+const express = require('express'),
     session = require('express-session'),
     app = express(),
     bodyParser = require('body-parser'),
@@ -12,9 +12,10 @@ var express = require('express'),
     //cookieParser = require("cookie-parser"),
     gulpfile = require('./gulpfile').execFile;
 
-var indexRoutes = require('./routes'),
+const indexRoutes = require('./routes'),
     dashboardRoutes = require('./routes/dashboard'),
-    dashboardContentRoutes = require('./routes/dashboard/content');
+    dashboardGetRoutes = require('./routes/dashboard/get'),
+    dashboardPostRoutes = require('./routes/dashboard/post');
 
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
@@ -40,7 +41,11 @@ app.use(session({
 	resave: false,
 	saveUninitialized: false,
   cookie: { httpOnly: false },
-  store: new MongoStore({ mongooseConnection: mongoose.connection, touchAfter: 24 * 3600 })
+  store: new MongoStore({
+    mongooseConnection: mongoose.connection,
+    touchAfter: 12 * 3600,
+    ttl: 4 * 24 * 3600
+  })
 }));
 
 app.use(passport.initialize());
@@ -64,7 +69,8 @@ app.use(function(req, res, next) {
 
 app.use(indexRoutes);
 app.use('/dashboard', dashboardRoutes);
-app.use('/dashboard/content', dashboardContentRoutes);
+app.use('/dashboard/get', dashboardGetRoutes);
+app.use('/dashboard/post', dashboardPostRoutes);
 
 app.listen(8080, function() {
     console.log('Bible App Operational');

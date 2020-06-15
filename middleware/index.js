@@ -18,14 +18,12 @@ module.exports = {
       date: todayMoment.toDate()
     };
     if (streakDate.isSame(todayMoment.subtract(1, 'days'), 'day')) {
-      console.log('same');
       User.findByIdAndUpdate(userID, { $set: { streak: data } }, function(err, user) {
         if (err) console.log(err);
         req.session.passport.user.streak = data;
         next();
       });
     } else if (streakDate.isBefore(todayMoment.subtract(1, 'days'), 'day')) {
-      console.log('before');
       data.days = 1;
       User.findByIdAndUpdate(userID, { $set: { streak: data } }, function(err, user) {
         if (err) console.log(err);
@@ -33,7 +31,6 @@ module.exports = {
         next();
       });
     } else {
-      console.log('next');
       next();
     }
   }

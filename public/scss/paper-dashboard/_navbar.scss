@@ -2,9 +2,8 @@
   padding-top: $navbar-padding-base;
   padding-bottom: $navbar-padding-base;
   min-height: 53px;
-  height: 63px;
   margin-bottom: 20px;
-
+  
   a {
     vertical-align: middle;
 
@@ -105,6 +104,26 @@
         }
       }
     }
+    
+    .navbar-optional-toggle{
+      margin: 0 10px 0 0;
+      padding: 7px;
+      height: 34px;
+      width: 34px;
+      background-color: rgb(102, 97, 91);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      :hover {
+        cursor: pointer;
+      }
+      .navbar-optional-toggler{
+        font-size: 20px;
+        padding: 0;
+        marign: 0;
+        @include transition (0.2s, ease-in-out);
+      }
+    }
   }
 
   .navbar-nav {
@@ -187,15 +206,15 @@
   .navbar-brand {
     text-transform: capitalize;
     font-size: $font-size-large-navbar;
-    padding-top: $padding-base-vertical;
-    padding-bottom: $padding-base-vertical;
     line-height: $line-height-nav-link;
-    a {
-      vertical-align: unset;
+    padding-top: 0;
+    padding-bottom: 0;
+    .navbar-brand-span {
+      margin-left: 0.7rem;
     }
     .breadcrumb {
       cursor: auto;
-      padding: 0.5rem 0.9rem;
+      padding: 0.3125rem 0.7rem;
       margin: 0 !important;
       span:hover {
         cursor: pointer;

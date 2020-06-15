@@ -22,10 +22,11 @@
     &:not([data-background-color]) {
       background-color: transparent;
     }
-    padding: 15px 15px 0;
+    padding: 12px 17px 0;
     border: 0;
     .card-title {
-      margin-top: 10px;
+      margin-top: 5px;
+      margin-bottom: 0px;
     }
   }
   .map {
@@ -141,7 +142,7 @@
       margin: 0 0 0 12px;
     }
     .card-text-only {
-      margin: 0 0 30px 12px !important;
+      margin: 0 0 38px 12px !important;
     }
     .ti-shine {
       margin-left: 5px;

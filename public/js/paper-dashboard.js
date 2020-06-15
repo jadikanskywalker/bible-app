@@ -34,7 +34,7 @@ fixedTop = false;
 
 navbar_initialized = false;
 backgroundOrange = false;
-sidebar_mini_active = false;
+sidebar_mini_active = true;
 toggle_initialized = false;
 
 seq = 0, delays = 80, durations = 500;
@@ -133,21 +133,15 @@ paperDashboard = {
   },
 
   initMinimizeSidebar: function() {
-    if ($('.sidebar-mini').length != 0) {
-      sidebar_mini_active = true;
-    }
-
     $('#minimizeSidebar').click(function() {
       var $btn = $(this);
 
       if (sidebar_mini_active == true) {
         $('body').addClass('sidebar-mini');
-        sidebar_mini_active = true;
-        paperDashboard.showSidebarMessage('Sidebar mini activated...');
+        sidebar_mini_active = false;
       } else {
         $('body').removeClass('sidebar-mini');
-        sidebar_mini_active = false;
-        paperDashboard.showSidebarMessage('Sidebar mini deactivated...');
+        sidebar_mini_active = true;
       }
 
       // we simulate the window Resize so the charts will get updated in realtime.
@@ -161,7 +155,6 @@ paperDashboard = {
       }, 1000);
     });
   },
-
   showSidebarMessage: function(message) {
     try {
       $.notify({
@@ -171,7 +164,7 @@ paperDashboard = {
         type: 'info',
         timer: 4000,
         placement: {
-          from: 'top',
+          from: 'bottom',
           align: 'right'
         }
       });

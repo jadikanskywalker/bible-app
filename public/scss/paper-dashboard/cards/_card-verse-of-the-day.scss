@@ -17,7 +17,6 @@
     > input {
       outline: 0;
       box-shadow: none;
-      
     }
   }
   .card-text {
@@ -29,5 +28,21 @@
     margin-left: 8px;
     margin-right: 8px;
     font-size: 14px;
+    .card-lable-link {
+      background-color: $light-gray;
+      color: $dark-gray;
+      line-height: 1;
+      padding: 5px;
+      height: 24px;
+      width: 24px;
+      margin-left: 2px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      @include transition(0.3s, ease-in);
+      &:hover {
+        background-color: $medium-gray;
+      }
+    }
   }
 }

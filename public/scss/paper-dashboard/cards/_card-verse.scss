@@ -1,36 +1,11 @@
 .card-verse {
-  overflow: auto;
+  overflow-x: visible;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  height: calc(100vh - 63px - 70px - 40px);
+  height: calc(100vh - 63px - 70px - 20px);
   margin: 0;
-  z-index: 1045;
-  padding: 0.75rem 1.3rem;
-  line-height: 1.5; /*.card-header { padding: 10px 20px; display: flex; align-items:
-center; justify-content: center; > input { font-size: $font-size-h3; border: none; border-bottom: 2px solid gray; line-height: 1; padding: 4px 6px; margin: 0 5px; width: 200px; } > input { outline: 0; box-shadow: none; } } .card-text { margin: 0px 8px
-10px !important; text-indent: 20px; font-size: 16px; } .card-label { margin-left: 8px; margin-right: 8px; font-size: 14px; }*/
-  button,
-  a {
-    background-color: rgba(3, 97, 151, 0.89);
-    color: white;
-    padding: 0.38rem 0.8rem;
-    border-radius: 100px;
-    line-height: 1;
-    border: none;
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
-    font-size: $font-size-small;
-    cursor: pointer;
-    outline: 0;
-    transition: box-shadow, background-color 0.3s ease;
-    text-decoration: none;
-    &:hover {
-      background-color: rgba(3, 97, 151, 1);
-    }
-    &:active {
-      outline: 0;
-      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.3);
-      transition: box-shadow 0.3s ease;
-    }
-  }
+  padding: 0.75rem 0.8rem;
+  line-height: 1.5;
   .card-load {
     display: none;
     position: absolute;
@@ -48,27 +23,18 @@ center; justify-content: center; > input { font-size: $font-size-h3; border: non
     animation: spin 1s linear 0s infinite normal forwards running;
   }
   .card-header {
-    position: relative;
     border: none;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     width: 100%;
-    padding-top: 0.2rem;
+    padding-top: 0;
     margin-bottom: 0.5rem;
+    min-height: fit-content;
   }
-  .card-prev,
-  .card-next {
-    overflow: hidden;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0;
-  }
-  .bible-search-div {
+  .card-search-div {
     position: relative;
-    overflow: hidden;
-    .bible-search-span {
+    .card-search-span {
       position: absolute;
       top: 0;
       left: 0;
@@ -76,48 +42,45 @@ center; justify-content: center; > input { font-size: $font-size-h3; border: non
       visibility: hidden;
       background: transparent;
       border: none;
-      border-bottom: 1px solid rgb(214, 214, 214);
+      border-bottom: 1px solid $light-gray;
       text-align: left;
-      outline: 0;
-      margin: 0.3rem 0.25rem;
-      font-size: $font-size-h4;
-      font-weight: 400;
-      padding: 0 1rem;
-      transition: background-color 0.3s ease;
-      line-height: 1.35;
-    }
-    .bible-search {
-      background: transparent;
-      border: none;
-      border-bottom: 1px solid rgb(214, 214, 214);
-      border-radius: 0px;
-      text-align: center;
-      outline: 0;
-      margin: 0.3rem 0.25rem;
-      width: 90px;
+      margin: 0rem 0.25rem;
       font-size: $font-size-h4;
       font-weight: 400;
       padding: 0 0.75rem;
+      line-height: 1.35;
+    }
+    .card-search {
+      background: transparent;
+      border: none;
+      border-bottom: 1px solid $light-gray;
+      border-radius: 0px;
+      text-align: center;
+      margin: 0rem 0.25rem;
+      font-size: $font-size-h4;
+      font-weight: 400;
+      padding: 0 0.75rem;
+      min-width: 8rem;
       width: 8rem;
       margin-right: 0.35rem;
-      transition: border-color 0.2s ease;
+      @include transition(0.2s, ease);
       line-height: 1.35;
       &:focus {
         outline: 0 !important;
-        border-bottom-color: rgb(150, 150, 150);
-        transition: border-color 0.2s ease;
+        border-bottom-color: $dark-gray;
+        @include transition(0.2s, ease);
       }
     }
-    .bible-search-chapter {
-      width: 50px;
+    .card-search-chapter {
+      min-width: 3rem;
+      width: 3rem;
       margin-left: 0rem;
       margin-right: 0.25rem;
     }
   }
-  .bible-search-button {
+  .card-search-btn {
     position: relative;
-    padding: 6px 8px 8px 6px !important;
-    line-height: 1;
+    padding: 6px;
     height: 34px;
     width: 34px;
     margin: auto 0.3rem auto 0;
@@ -135,10 +98,10 @@ center; justify-content: center; > input { font-size: $font-size-h3; border: non
     border-radius: 50%;
     width: 5px;
     height: 5px;
-    animation: rippleEffect 0.88s 1;
+    /*animation: rippleEffect 0.88s 1;*/
     opacity: 0;
   }
-  @keyframes rippleEffect {
+  /*@keyframes rippleEffect {
     0% {
       transform: scale(1);
       opacity: 0.4;
@@ -147,34 +110,70 @@ center; justify-content: center; > input { font-size: $font-size-h3; border: non
       transform: scale(80);
       opacity: 0;
     }
-  }
-  .autocomplete-suggestions {
-    border: none;
-    border-radius: 5px;
-    background: #fff;
-    cursor: default;
-    overflow: auto;
-    box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
-    min-width: 11rem !important;
-    strong {
-      font-weight: normal;
-      text-decoration: underline;
+  }*/
+  .card-format {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-bottom: 0.5rem;
+    margin-right: 1.4rem;
+    padding: 0;
+    .card-format-textsize {
+      padding-left: 0.1rem;
+      padding-right: 0.1rem;
+      font-size: 16px;
+      background: transparent;
+      &:hover {
+        background: transparent;
+      }
     }
-    .autocomplete-suggestion {
-      padding: 10px 5px;
-      font-size: $font-size-base;
-      white-space: nowrap;
-      cursor: pointer;
-      overflow: hidden;
-      transition: background 0.3s ease;
+    .card-format-smallA {
+      font-size: 12px;
+      padding-left: 2px;
     }
-    .autocomplete-selected {
-      background: #f0f0f0;
-      transition: background 0.3s ease;
+    .dropdown-item {
+      font-size: 20px;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      &:hover, &:active {
+        background-color: white !important;
+        color: #66615b !important;
+      }
+    }
+    .card-format-textsize-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      height: 5px;
+      border-radius: $border-radius-large;
+      background-color: $light-gray;
+      outline: none;
+      @include transition(.2s, ease-in-out);
+      &:hover {
+        background-color: $medium-gray;
+      }
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 15px;
+        height: 15px;
+        background-color: $primary-color;
+        cursor: pointer;
+        border: none;
+        border-radius: 50%;
+      }
+      &::-moz-range-thumb {
+        width: 15px;
+        height: 15px;
+        background-color: $primary-color;
+        cursor: pointer;
+        border: none;
+        border-radius: 50%;
+      }
     }
   }
   .card-div {
-    font-size: 1.1rem;
+    font-size: 16px;
     -webkit-columns: 50% 2;
     -moz-columns: 50% 2;
     columns: 350px 2;
@@ -188,7 +187,7 @@ center; justify-content: center; > input { font-size: $font-size-h3; border: non
       -webkit-column-break-inside: avoid;
       page-break-inside: avoid;
       break-inside: avoid;
-      .card-verse {
+      .card-div-verse {
         font-size: 90%;
         padding: 0 0.8rem;
         color: #6f6f6f;
@@ -203,74 +202,39 @@ center; justify-content: center; > input { font-size: $font-size-h3; border: non
   }
   .card-buttons {
     padding-top: 10px;
-    font-size: 1.2rem;
   }
   .card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: fit-content;
     position: relative;
-    padding: 0.6rem 0 1rem;
+    padding: 0.3rem 0 0.1rem;
     .card-copyright {
       margin: 0;
+      margin-left: 5px;
       color: #6f6f6f;
       font-size: $font-size-medium;
     }
-  }
-  .card-prev,
-  .card-next {
-    padding: 0.5rem 0.55rem 0.4rem !important;
-    z-index: 1050;
-    overflow: hidden;
-    span {
-      font-size: 27px;
-    }
-  }
-  .card-prev {
-    left: 0.4%;
-  }
-  .card-next {
-    right: 0.4%;
-  }
-  .card-down {
-    position: absolute;
-    bottom: 1%;
-    right: 5.8%;
-    padding: 4px !important;
-    height: 42px;
-    width: 42px;
-    z-index: 1050;
-    overflow: hidden;
-    span {
-      font-size: 34px !important;
+    .card-up {
+      display: none;
+      padding: 4px 0px 7px;
+      font-size: 20px;
+      line-height: 1px;
+      height: 32px;
+      margin-right: 5px;
     }
   }
   @media (min-width: 400px) {
-    padding: 0.75rem 1.5rem;
+    padding: 0.8rem 1.1rem;
   }
   @media (min-width: 768px) {
-    padding: 0.8rem 2.5rem;
-    .card-prev,
-    .card-next {
-      padding: 0.4rem 0.45rem 0.3rem;
-      span {
-        font-size: 24px;
-      }
-    }
-    .card-prev {
-      left: 6.5%;
-    }
-    .card-next {
-      right: 6.5%;
-    }
+    padding: 0.8rem 1.5rem;
     .card-down {
       right: 9.8%;
     }
   }
   @media (min-width: 992px) {
-    .card-prev {
-      left: 16.6%;
-    }
-    .card-next {
-      right: 16.6%;
-    }
     .card-down {
       right: 19.4%;
     }
@@ -287,3 +251,79 @@ center; justify-content: center; > input { font-size: $font-size-h3; border: non
     }
   }
 }
+.autocomplete-suggestions {
+  background-color: $white-color;
+  border: 0 none;
+  brder-radius: $border-radius-extreme;
+  margin-top: 3px;
+  padding: 0px;
+  cursor: default;
+  overflow: auto;
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+  min-width: 11rem !important;
+  strong {
+    font-weight: 600;
+  }
+  .autocomplete-suggestion{
+    color: $font-color;
+    font-size: $font-size-base;
+    padding: 10px 45px 10px 15px;
+    clear: both;
+    white-space: nowrap;
+    width: 100%;
+    display: block;
+  }
+  .autocomplete-suggestion:first-child{
+    border-top-left-radius: $border-radius-extreme;
+    border-top-right-radius: $border-radius-extreme;
+  }
+  .autocomplete-suggestion:last-child{
+    border-bottom-left-radius: $border-radius-extreme;
+    border-bottom-right-radius: $border-radius-extreme;
+  }
+  .select & .dropdown-item:first-child{
+    border-radius: 0;
+    border-bottom: 0 none;
+  }
+  .autocomplete-suggestion:hover,
+  .autocomplete-suggestion:focus,
+  .autocomplete-selected{
+    color: $white-color !important;
+    opacity: 1;
+    outline: 0 !important;
+    background-color: $default-color;
+  }
+}
+.card-prev,
+.card-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0px;
+  padding: 6px;
+  font-size: 20px;
+  line-height: 1;
+  height: 34px;
+  width: 34px;
+  z-index: 1050;
+  display: none;
+  box-shadow: $box-shadow;
+}
+.card-prev {
+  left: -4px;
+}
+.card-next {
+  right: -4px;
+}
+/*.card-up {
+  position: absolute;
+  bottom: -20px;
+  right: 5.8%;
+  margin: 0;
+  padding: 4px 6px 7px;
+  font-size: 20px;
+  line-height: 1px;
+  height: 32px;
+  width: 32px;
+  z-index: 1050;
+}*/

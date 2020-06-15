@@ -1,0 +1,200 @@
+<div class="row">
+  <div class="col-md-4">
+    <div class="card card-user">
+      <div class="image">
+        <img src="../img/header.jpg" alt="...">
+        <a class="image-hover"></a>
+      </div>
+      <div class="card-body">
+        <div class="author">
+          <a>
+            <img class="avatar border-gray" src="../img/default-avatar.png" alt="...">
+            <a class="avatar-hover"></a>
+            <h4 class="title">
+              <%= user.name %>
+            </h4>
+          </a>
+          <p class="description">
+            <%= user.username %>
+          </p>
+          <p class="description mb-4">
+            <% if (user.email) %>
+              <%= user.email;  %>
+          </p>
+        </div>
+      </div>
+      <div class="card-footer">
+        <hr>
+        <div class="button-container">
+          <div class="row">
+            <div class="col-xl-4 col-md-6 col-6 ml-auto">
+              <h5>5
+                <br>
+                <small>Saved Verses</small>
+              </h5>
+            </div>
+            <div class="col-xl-4 col-md-6 col-6 ml-auto mr-auto">
+              <h5>7
+                <br>
+                <small>Notes</small>
+              </h5>
+            </div>
+            <div class="col-xl-4 col-lg-8 ml-auto mr-auto">
+              <h5>3
+                <br>
+                <small>Journal Entries</small>
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h4 class="card-title">Plans</h4>
+      </div>
+      <div class="card-body">
+        <ul class="list-unstyled team-members">
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="../assets/img/faces/ayo-ogunseinde-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                </div>
+              </div>
+              <div class="col-md-7 col-7">
+                DJ Khaled
+                <br />
+                <span class="text-muted">
+                  <small>Offline</small>
+                </span>
+              </div>
+              <div class="col-md-3 col-3 text-right">
+                <btn class="btn btn-sm btn-outline-success btn-round btn-icon">
+                  <i class="fa fa-envelope"></i>
+                </btn>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="../assets/img/faces/joe-gardner-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                </div>
+              </div>
+              <div class="col-md-7 col-7">
+                Creative Tim
+                <br />
+                <span class="text-success">
+                  <small>Available</small>
+                </span>
+              </div>
+              <div class="col-md-3 col-3 text-right">
+                <btn class="btn btn-sm btn-outline-success btn-round btn-icon">
+                  <i class="fa fa-envelope"></i>
+                </btn>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="row">
+              <div class="col-md-2 col-2">
+                <div class="avatar">
+                  <img src="../assets/img/faces/clem-onojeghuo-2.jpg" alt="Circle Image" class="img-circle img-no-padding img-responsive">
+                </div>
+              </div>
+              <div class="col-ms-7 col-7">
+                Flume
+                <br />
+                <span class="text-danger">
+                  <small>Busy</small>
+                </span>
+              </div>
+              <div class="col-md-3 col-3 text-right">
+                <btn class="btn btn-sm btn-outline-success btn-round btn-icon">
+                  <i class="fa fa-envelope"></i>
+                </btn>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="card card-user">
+      <div class="card-header">
+        <h5 class="card-title">Edit Profile</h5>
+      </div>
+      <form method="POST" action="./post/user/profile" class="card-body">
+        <div class="row">
+          <div class="col-md-6 col-sm-6 col-12 pr-sm-1">
+            <div class="form-group">
+              <label>Name</label>
+              <input name="name" type="text" class="form-control" placeholder="Name" value="<%= user.name; %>">
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-6 col-12 px-md-1 pl-sm-1">
+            <div class="form-group">
+              <label>Username</label>
+              <input name="username" type="text" class="form-control" placeholder="Username" value="<%= user.username; %>">
+            </div>
+          </div>
+          <div class="col-md-10 col-12">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input name="email" type="email" class="form-control" placeholder="Email" value="<% if (user.email) %><%= user.email; %>">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!--<div class="col-md-3 col-sm-6 col-12 pl-sm-1">
+            <div class="form-group">
+              <label>Age</label>
+              <input type="number" class="form-control" placeholder="Age" min="5" max="120" value="<% if (user.age) %><%= user.age; %>">
+            </div>
+          </div>-->
+        </div>
+        <div class="row">
+          <div class="update mx-auto">
+            <button type="submit" class="btn btn-primary btn-round mt-2 mb-4 mb-md-1 post-user-profile">Update Profile</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="card card-user">
+      <div class="card-header">
+        <h5 class="card-title">Change Password</h5>
+      </div>
+      <form method="POST" action="./post/user/password" class="card-body">
+        <div class="row">
+          <div class="col-md-4 col-sm-6 pr-sm-1">
+            <div class="form-group">
+              <label>Old Password</label>
+              <input name="oldPassword" type="password" class="form-control" placeholder="Old Password">
+            </div>
+          </div>
+          <div class="d-none d-sm-block d-md-none col-sm-6"></div>
+          <div class="col-md-4 col-sm-6 px-md-1 pr-sm-1">
+            <div class="form-group">
+              <label>New Password</label>
+              <input name="newPassword" type="password" class="form-control" placeholder="New Password">
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 pl-sm-1">
+            <div class="form-group">
+              <label>Confirm Password</label>
+              <input name="confirmPassword" type="password" class="form-control" placeholder="Confirm Password">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="update mx-auto">
+            <button type="submit" class="btn btn-primary btn-round post-user-password">Change Password</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
