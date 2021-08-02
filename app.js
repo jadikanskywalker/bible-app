@@ -21,10 +21,10 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.set('view engine', 'ejs');
 
-mongoose.connect('mongodb://localhost:27017/bible-app', {
+mongoose.connect('mongodb+srv://jadikan:JW68MU4yiyRDurp@bible-app.rzbzf.mongodb.net/bible-app?retryWrites=true&w=majority', {
 	useNewUrlParser: true,
-	useCreateIndex: true,
-  useFindAndModify: false
+  createIndexes: true,
+  useUnifiedTopology: true
 })
   .then(() => console.log(`Database connected`))
   .catch(err => console.log(`Database connection error: ${err.message}`));
@@ -73,5 +73,5 @@ app.use('/dashboard/get', dashboardGetRoutes);
 app.use('/dashboard/post', dashboardPostRoutes);
 
 app.listen(8080, function() {
-    console.log('Bible App Operational');
+    console.log('Bible App Operational at http://localhost:8080');
 });

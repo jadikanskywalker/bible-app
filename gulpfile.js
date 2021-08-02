@@ -31,7 +31,6 @@ gulp.task('open', function() {
     .pipe(open());
 });
 
-gulp.task('open-app', ['open', 'watch']);
+gulp.task('open-app', gulp.series('open', 'watch'));
 
-gulp.start('compile-scss');
-gulp.start('watch');
+gulp.series('compile-scss', 'watch');
